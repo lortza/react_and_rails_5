@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
 
+ruby '2.3.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0'
-# Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
@@ -27,10 +27,17 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'awesome_print', :require => 'ap' #makes command line data prettier
+gem 'react-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platform: :mri
+  # gem 'byebug', platform: :mri
+  gem 'pry-byebug'
+  gem 'pry-rails'
+  gem 'pry-awesome_print'
+  gem 'better_errors' #creates console in browser for errors
+  gem 'binding_of_caller' #goes with better_errors
 end
 
 group :development do
