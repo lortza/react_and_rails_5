@@ -1,6 +1,4 @@
-# README
-
-# React & Rails 5
+# React & Rails 5 practice app
 
 A practice app from the [Free React on Rails 5 course]('https://learnetto.com/tutorials/installation-and-setup-of-rails-5-app-with-react-rails-gem')
 
