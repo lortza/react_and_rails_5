@@ -12,5 +12,8 @@ A practice app from the [Free React on Rails 5 course]('https://learnetto.com/tu
 
 # App Features
 
-TBD
+- Uses a datepicker to select a date
+- Views are updated with React components instead of ajax
+- New appointments are added to the index page upon form submission
+- New appointments appear in chrono order
 
