@@ -1,20 +1,6 @@
 <h1>React Calendar</h1>
+<%= react_component 'HelloWorld', { greeting: "Sup Brah" } %>
 
 <h2>Appointments</h2>
+<%= react_component 'Appointments', data: @appointments %>
 
-<h3>Make New Appointment</h3>
-
-<%= form_for @appointment, remote: true do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title, class: 'form-control' %>
-
-  <%= f.label :start_time %>
-  <%= f.text_field :start_time, class: 'form-control' %>
-
-  <%= f.submit 'Make Appointment'%>
-<% end %> <!-- form_for @appointment -->
-
-<%= render 'appointments' %>
-
-<%= react_component 'Appointments' %>
-<%= react_component 'HelloWorld', { greeting: "Sup Brah" } %>

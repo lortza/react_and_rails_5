@@ -5,10 +5,12 @@ class AppointmentsController < ApplicationController
   end
 
   def create
-    @appointments = Appointment.order('start_time ASC')
-    @appointment = Appointment.create(appointment_params)
-    respond_to :js
-    # redirect_to appointments_url
+    @appointment = Appointment.new(appointment_params)
+    if @appointment.save
+      render json: @appointment
+    else
+      render json: @appointment.errors, status: :unprocessable_entity
+    end
   end
 
   private
