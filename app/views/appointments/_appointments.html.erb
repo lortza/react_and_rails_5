@@ -1,0 +1,6 @@
+<div id="appointments-list">
+  <% @appointments.each do |appt| %>
+    <h3><%= appt.title %></h3>
+    <p><%= appt.start_time %></p>
+  <% end %>
+</div> <!-- appointments-list -->
