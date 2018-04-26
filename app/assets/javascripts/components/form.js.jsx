@@ -1,12 +1,11 @@
 var Form = createReactClass({
 
-  // When the input field changes, call this method, which will call onUserInput from the parent.
+  // When the input field changes, call this method, which will call onUserInput from the Appointment parent.
   handleChange: function(e){
-    // build the object that will be passed back to the parent
-    var name = e.target.name;
+    // Build the object that will be passed back to the parent
     obj = {};
-    obj[name] = e.target.value;
-    // call the function that will set the state
+    obj[e.target.name] = e.target.value;
+    // Call the function that will set the parent's state
     this.props.onUserInput(obj);
   },
 
@@ -16,10 +15,9 @@ var Form = createReactClass({
   },
 
   setApptTime: function(e){
-    let name = 'start_time'
     obj = {};
-    if(obj[name] = e.toDate()){
-      // call the function that will set the state
+    if(obj['start_time'] = e.toDate()){
+      // Call the function that will set the state
       this.props.onUserInput(obj)
     }
   },
@@ -46,7 +44,7 @@ var Form = createReactClass({
           value={this.props.start_time}
           onChange={this.setApptTime}
         />
-        <input type='submit' value='Make Appointment' />
+        <input type='submit' value='Make Appointment' className="btn btn-xs btn-primary" />
       </form>
     );
   }

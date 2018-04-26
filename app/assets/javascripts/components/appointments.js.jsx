@@ -52,9 +52,7 @@ var Appointments = createReactClass({
           onFormSubmit={this.handleFormSubmit}
         />
 
-        <AppointmentsList
-          appointments={this.state.appointments}
-        />
+        <AppointmentsList appointments={this.state.appointments} />
 
       </React.Fragment>
     )// return
