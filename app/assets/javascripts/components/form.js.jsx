@@ -30,12 +30,10 @@ var Form = createReactClass({
         <label>Title</label>
         <input
           name='title'
-          className='form-control'
+          className='form-control mb-2'
           value={this.props.title}
           onChange={this.handleChange}
         />
-
-        <label>Start Time</label>
 
         <Datetime
           open={true}

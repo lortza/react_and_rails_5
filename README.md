@@ -4,16 +4,17 @@ A practice app from the [Learnetto Free React on Rails 5 course](https://learnet
 
 [Anne Richardson](https://github.com/lortza)
 
-# App Stats
+## App Stats
 
 * Ruby: 2.3.3
 * Rails: 5.0
 * Postgres
 
-# App Features
+## App Features
 
 - Uses a datepicker to select a date
 - Views are updated with React components instead of ajax
 - New appointments are added to the index page upon form submission
 - New appointments appear in chrono order
+- Sets default date to today
 

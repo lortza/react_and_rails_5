@@ -3,8 +3,8 @@ var Appointments = createReactClass({
   getInitialState: function(){
     return {
       appointments: this.props.data,
-      title: 'Test appointment',
-      start_time: '26 April 2018'
+      title: ' ',
+      start_time: new Date()
     }
   },
 
