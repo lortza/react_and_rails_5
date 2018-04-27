@@ -4,6 +4,8 @@ A practice app from the [Learnetto Free React on Rails 5 course](https://learnet
 
 [Anne Richardson](https://github.com/lortza)
 
+Deployed to heroku: https://react-rails-5-appointments.herokuapp.com/
+
 ## App Stats
 
 * Ruby: 2.3.3
