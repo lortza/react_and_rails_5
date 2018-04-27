@@ -9,6 +9,7 @@ A practice app from the [Learnetto Free React on Rails 5 course](https://learnet
 * Ruby: 2.3.3
 * Rails: 5.0
 * Postgres
+* Javascript ES5 (with separate branch for ES6 implementation)
 
 ## App Features
 
