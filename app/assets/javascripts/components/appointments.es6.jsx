@@ -1,21 +1,23 @@
-var Appointments = createReactClass({
+class Appointments extends React.Component {
+
   // Set the initial state via the props. The props are getting their info from the index.html.erb
-  getInitialState: function(){
-    return {
+  constructor(props){
+    super(props)
+    this.state = {
       appointments: this.props.data,
       title: ' ',
       start_time: new Date()
     }
-  },
+  }
 
   // This method gets its callback object from the form input
-  handleUserInput: function(obj){
+  handleUserInput(obj){
     // set the state to the new input field values
     this.setState(obj)
-  },
+  }
 
   // Post an ajax request to the appointments controller
-  handleFormSubmit: function(){
+  handleFormSubmit(){
     let appt = {
       title: this.state.title,
       start_time: this.state.start_time
@@ -25,9 +27,9 @@ var Appointments = createReactClass({
      .then(function(data){
         this.addNewAppointment(appt)
      }.bind(this))
-  },
+  }
 
-  addNewAppointment: function(appt){
+  addNewAppointment(appt){
     // Push the new appointment into the state's array
     let allAppts = this.state.appointments
     allAppts.push(appt)
@@ -38,9 +40,10 @@ var Appointments = createReactClass({
         return new Date(a.start_time) - new Date(b.start_time);
       })
     })//setState
-  },
+  }
 
-  render: function() {
+
+  render () {
     return (
       <React.Fragment>
 
@@ -48,8 +51,8 @@ var Appointments = createReactClass({
           title={this.state.title}
           start_time={this.state.start_time}
           // this prop passes this function to the Form
-          onUserInput={this.handleUserInput}
-          onFormSubmit={this.handleFormSubmit}
+          onUserInput={this.handleUserInput.bind(this)}
+          onFormSubmit={this.handleFormSubmit.bind(this)}
         />
 
         <AppointmentsList appointments={this.state.appointments} />
@@ -57,7 +60,6 @@ var Appointments = createReactClass({
       </React.Fragment>
     )// return
   }
-});
-
+}
 
 

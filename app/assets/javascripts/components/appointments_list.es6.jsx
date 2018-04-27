@@ -1,6 +1,5 @@
-// Set up the component that shows the list of appointments
-var AppointmentsList = createReactClass({
-  render: function() {
+class AppointmentsList extends React.Component {
+  render () {
     return (
       <div id="appointments-list">
         {this.props.appointments.map(function(appt){
@@ -13,4 +12,6 @@ var AppointmentsList = createReactClass({
       </div>
     )// return
   }
-});
+}
+
+
