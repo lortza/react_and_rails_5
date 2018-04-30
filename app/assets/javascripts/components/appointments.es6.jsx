@@ -11,13 +11,13 @@ class Appointments extends React.Component {
   }
 
   // This method gets its callback object from the form input
-  handleUserInput(obj){
+  setInputAsState(obj){
     // set the state to the new input field values
     this.setState(obj)
   }
 
   // Post an ajax request to the appointments controller
-  handleFormSubmit(){
+  saveStateToDatabase(){
     let appt = {
       title: this.state.title,
       start_time: this.state.start_time
@@ -51,8 +51,8 @@ class Appointments extends React.Component {
           title={this.state.title}
           start_time={this.state.start_time}
           // this prop passes this function to the Form
-          onUserInput={this.handleUserInput.bind(this)}
-          onFormSubmit={this.handleFormSubmit.bind(this)}
+          onUserInput={this.setInputAsState.bind(this)}
+          onFormSubmit={this.saveStateToDatabase.bind(this)}
         />
 
         <AppointmentsList appointments={this.state.appointments} />
