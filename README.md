@@ -6,6 +6,9 @@ A practice app from the [Learnetto Free React on Rails 5 course](https://learnet
 
 Deployed to heroku: https://react-rails-5-appointments.herokuapp.com/
 
+_App is currently turned off_
+
+
 ## App Stats
 
 * Ruby: 2.3.3
