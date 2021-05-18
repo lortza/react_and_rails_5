@@ -108,7 +108,8 @@ GEM
       pry (~> 0.10)
     pry-rails (0.3.6)
       pry (>= 0.10.4)
-    puma (3.12.6)
+    puma (4.3.8)
+      nio4r (~> 2.0)
     rack (2.0.8)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -199,7 +200,7 @@ DEPENDENCIES
   pry-awesome_print
   pry-byebug
   pry-rails
-  puma (~> 3.12)
+  puma (~> 4.3)
   rails (~> 5.0.0)
   react-rails
   sass-rails (~> 5.0)
